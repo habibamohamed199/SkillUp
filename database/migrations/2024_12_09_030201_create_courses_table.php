@@ -22,7 +22,8 @@ return new class extends Migration
             $table->text('thumbnail')->nullable();
             $table->integer("price")->nullable(false);
             $table->float("rating")->default(0);
-            $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
     }
 

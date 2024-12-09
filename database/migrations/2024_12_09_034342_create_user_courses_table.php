@@ -17,8 +17,8 @@ return new class extends Migration
             $table->uuid('course_id');
             $table->foreign('course_id')->references('id')->on('courses');
             $table->enum('rating',[1,2,3,4,5])->default(null);
-
-            $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
     }
 
