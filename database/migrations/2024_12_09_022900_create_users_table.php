@@ -22,6 +22,7 @@ return new class extends Migration
             $table->enum('role',['admin','user'])->default('user')->nullable(false);
             $table->string('password','60')->nullable(false);
             $table->enum('gender', ['male', 'female'])->nullable(false);
+            $table->integer('credit')->default(0);
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });

@@ -15,6 +15,7 @@ return new class extends Migration
         Schema::create('courses', function (Blueprint $table) {
             $table->uuid('id')->default(DB::raw('UUID()'))->primary();
             $table->string('title','50')->nullable(false);
+            $table->string('category')->nullable(false);
             $table->text('description')->nullable(false);
             $table->text('brief')->nullable(false);
             $table->string('author_id','30')->nullable(false);
