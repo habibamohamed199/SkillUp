@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('category')->nullable(false);
             $table->text('description')->nullable(false);
             $table->text('brief')->nullable(false);
-            $table->string('author_id','30')->nullable(false);
+            $table->uuid('author_id')->nullable(false);
             $table->foreign('author_id')->references('id')->on('users');
             $table->text('thumbnail')->nullable();
             $table->integer("price")->nullable(false);
