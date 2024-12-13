@@ -14,3 +14,6 @@ Route::get("/login",[LoginController::class,'index'])->name("login-page");
 Route::post("/login-user",[LoginController::class,'login'])->name("login-user");
 Route::get('/upload-video',[VideoUploadController::class,'index'])->name("upload-video");
 Route::post('/upload',[VideoUploadController::class,'upload'])->name("upload");
+route::get('/signup',[RegisterController::class,'index'])->name("signup");
+rout::post('/signup-user',[RegisterController::class,'register'])->name("signup-user");
+
