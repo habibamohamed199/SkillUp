@@ -13,23 +13,22 @@ class LoginController extends Controller
         return view('testing/login');
     }
     public function login(){
-        try {
-            validator(request()->all(), [
-                'email' => 'required|email',
+
+            request()->validate([
+
+                'email' => 'required|email|exists:users,email',
                 'password' => 'required|min:8'
-            ])->validate();
-        }
-        catch (\Exception $e) {
-            return $e->getMessage();
-        }
 
+            ]);
 
+         if(Auth::attempt(['email' => request('email'), 'password' => request('password')])){
+           return "Success";
+         }else {
+             return back()->withErrors([
+                 'login' => 'Wrong Email or Password',
+             ])->withInput(); // Retain the old input data
+         }
 
-        if (Auth::attempt(['email' => request('email'), 'password' => request('password')])) {
-            return "success";
-        }else {
-            return "fail";
-        }
     }
 
 }

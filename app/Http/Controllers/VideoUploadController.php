@@ -19,10 +19,9 @@ class VideoUploadController extends Controller
     public function upload()
     {
         $request = request();
-        // Validate the incoming request for multiple files
         $request->validate([
-            'videos' => 'required|array', // Expect an array of files
-            'videos.*' => 'file|mimes:mp4,mkv,avi|max:2048000', // Validate each file in the array (2GB max per file)
+            'videos' => 'required|array',
+            'videos.*' => 'file|mimes:mp4,mkv,avi|max:2048000',
         ]);
 
         $uploadedFiles = [];
@@ -32,8 +31,8 @@ class VideoUploadController extends Controller
             $course = new Course;
             $course->title = "Test Course";
             $course->category = "Test Category";
-            $author=User::where('email',request('author'))->first();
-            $course->author_id=$author->id;
+            $author = User::where('email', request('author'))->first();
+            $course->author_id = $author->id;
             $course->thumbnail = "Test Thumbnail";
             $course->description = $request->description;
             $course->brief = $request->description;
@@ -45,9 +44,9 @@ class VideoUploadController extends Controller
                 $path = $video->storeAs('videos', $customFilename, 'public');
                 $url = Storage::url($path);
                 $newVideo = new video;
-                $newVideo->title=$customFilename;
-                $newVideo->path=$url;
-                $newVideo->course_id=$course->id;
+                $newVideo->title = $customFilename;
+                $newVideo->path = $url;
+                $newVideo->course_id = $course->id;
                 $newVideo->save();
 
 
