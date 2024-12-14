@@ -1,0 +1,205 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .search-bar-container {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: flex-start;
+  }
+  
+  .search-bar {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2em;
+    border-radius: 30px;
+    border: none;
+    padding-right: 35px; /* Add space for the search icon */
+  }
+  
+  .search-btn {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px; /* Position the search icon inside the input */
+  }
+  
+  .search-btn i {
+    color: #333;
+    font-size: 1.2em;
+  }
+  
+  /* Navigation Styles */
+  nav {
+    text-align: right;
+  }
+  
+  .nav-list {
+    list-style-type: none;
+    display: inline-flex;
+  }
+  
+  .nav-list li {
+    margin: 0 15px;
+  }
+  
+  .nav-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+  
+  .nav-list li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Form Styles */
+  body {
+    background-color: #000; /* Black background for the whole page */
+  }
+  
+  .form-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #333; /* Dark background for the form */
+    border-radius: 8px;
+  }
+  
+  .form-title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 1em;
+    margin-bottom: 5px;
+    color: white;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    font-size: 1em;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .form-row .form-group {
+    width: 48%;
+  }
+  
+  .gender-options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+  }
+  
+  .gender-options label {
+    color: white; /* Make gender options white */
+  }
+  
+  .gender-row label {
+    color: white; /* Make the "Gender" label text white */
+  }
+  
+  .sign-up-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: red; /* Red color for Sign Up button */
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .sign-up-btn:hover {
+    background-color: #b30000; /* Darker red on hover */
+  }
+  
+  .already-registered {
+    text-align: center;
+    margin-top: 15px;
+    color: white; /* Make "Already Registered" text white */
+  }
+  
+  .already-registered a {
+    color: blue; /* Blue color for Sign In link */
+    text-decoration: none;
+  }
+  
+  .already-registered a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .search-bar-container {
+      width: 100%;
+      margin-top: 10px;
+      justify-content: flex-start; /* Align the search bar to the left */
+    }
+  
+    .search-bar {
+      width: 80%; /* Adjust search bar width on small screens */
+    }
+  
+    .nav-list {
+      flex-direction: column;
+      margin-top: 15px;
+    }
+  
+    .nav-list li {
+      margin: 10px 0;
+    }
+  
+    .form-container {
+      max-width: 90%; /* Adjust form width on small screens */
+    }
+  }
+  

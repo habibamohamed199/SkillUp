@@ -8,12 +8,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/signup2',function(){
+    return view('signup');
+});
+Route::get('/courseplay',function(){
+    return view('courseplay');
+});
+
+
 Route::post('/register-user',[RegisterController::class,'register'])->name("register-user");
 Route::get("/reg",[RegisterController::class,'index'])->name("register-page");
 Route::get("/login",[LoginController::class,'index'])->name("login-page");
 Route::post("/login-user",[LoginController::class,'login'])->name("login-user");
 Route::get('/upload-video',[VideoUploadController::class,'index'])->name("upload-video");
 Route::post('/upload',[VideoUploadController::class,'upload'])->name("upload");
-route::get('/signup',[RegisterController::class,'index'])->name("signup");
-rout::post('/signup-user',[RegisterController::class,'register'])->name("signup-user");
+Route::get('/signup',[RegisterController::class,'index'])->name("signup");Route::post('/signup-user',[RegisterController::class,'register'])->name("signup-user");
 

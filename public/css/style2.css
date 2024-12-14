@@ -1,0 +1,114 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .search-bar {
+    flex-grow: 1;
+    margin: 0 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .menu {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .menu-link {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .price {
+    color: #ffd700;
+  }
+  
+  .main {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .video-section {
+    flex: 2;
+  }
+  
+  .video-wrapper video {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .episode-title {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  .comments {
+    margin-top: 20px;
+  }
+  
+  .comments h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .comment {
+    margin-bottom: 10px;
+  }
+  
+  .comment-input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .episodes {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .episode {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .episode img {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+  }
+  
+  .episode h4 {
+    font-size: 16px;
+    margin: 0;
+  }
+  
