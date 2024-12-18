@@ -27,7 +27,7 @@
                 </div>
             @endif
 
-            <!-- Upload Form -->
+
             <form action="{{ route('upload') }}" method="POST" enctype="multipart/form-data" class="bg-white p-4 rounded shadow">
                 @csrf
                 <div class="mb-3">
