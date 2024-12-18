@@ -22,7 +22,7 @@
   </header>
   <div class="welcome">
     <h2>Welcome to SkillUp</h2>
-    </div>
+  </div>
   <main>
     <div class="signup-container">
       <form>
@@ -47,7 +47,7 @@
                 <label><input type="radio" name="gender"> Female</label>
               </div>
             </div>
-            <p>Already Registered? <a href="#" class="signin-link">Sign in</a></p>
+            <p class="already-registered">Already Registered? <a href="#" class="signin-link">Sign in</a></p>
           </div>
         </div>
         <button type="submit" class="signup-btn">Sign Up</button>

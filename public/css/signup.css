@@ -215,16 +215,29 @@ form input {
 .gender-label {
   font-weight: bold; 
   font-size: 16px;
+  width: 45px;
+  height: 20px;
+  top: 402px;
+  left: 911px;
+  gap: 0px;
+  opacity: 0px;
+
 }
 
 .gender .gender-options {
   display: flex; 
   gap: 30px; 
+
 }
 
 .gender input[type="radio"] {
-  margin-right: 5px; 
-  vertical-align: middle; 
+  width: 24px;
+  height: 24px;
+  top: 400px;
+  left: 880px;
+  gap: 0px;
+  opacity: 0px;
+
 }
 
 .gender label {
@@ -237,15 +250,24 @@ form input {
 
 .already-registered {
   width: 100%;
-  text-align: right;
+  text-align: left;
   font-size: 14px;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.already-registered span {
+  color: #E3E3E3;
 }
 
 .already-registered a {
   color: #0015FF;
   text-decoration: none;
+}
 
+.already-registered a:hover {
+  text-decoration: underline;
 }
 
 .signup-btn {
