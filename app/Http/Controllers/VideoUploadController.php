@@ -13,7 +13,8 @@ class VideoUploadController extends Controller
 {
     public function index()
     {
-        return view('video_upload');
+        $cats= ['edu','test','blah blah'];
+        return view('video_upload',['categories'=>$cats]);
     }
 
     public function upload()
