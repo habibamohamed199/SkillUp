@@ -22,13 +22,15 @@ class LoginController extends Controller
             ]);
 
          if(Auth::attempt(['email' => request('email'), 'password' => request('password')])){
-           $user = auth()->user();
-           return "welcome ".$user->name;
+             request()->session()->regenerate();
+
+
+             return redirect()->intended("/upload-video");
 
          }else {
              return back()->withErrors([
                  'login' => 'Wrong Email or Password',
-             ])->withInput(); // Retain the old input data
+             ])->withInput();
          }
 
     }

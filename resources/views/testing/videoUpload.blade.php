@@ -10,7 +10,7 @@
         <div class="container mt-5">
             <h1 class="text-center mb-4">Upload Your Video</h1>
 
-            <!-- Display success or error messages -->
+
             @if(session('success'))
                 <div class="alert alert-success">
                     {{ session('success') }}

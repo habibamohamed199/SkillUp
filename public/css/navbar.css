@@ -5,10 +5,13 @@ header {
     justify-content: space-between;
     display: flex;
     align-items: center;
-    position: fixed;
-    z-index: 999;
-    padding: 10px 20px;
+    position:sticky;
+    top: 0;
+    z-index:999;
+    padding: 20px 20px;
     max-height: 8vh;
+    background-color: #121212;
+
 }
 
 .logo {
@@ -104,7 +107,7 @@ li {
     color: #B83939;
     transition: all 0.3s ease-in-out;
     text-decoration: none;
-    margin: 0 10px;
+
     padding: 10px;
     font-size: 18px;
 
@@ -185,3 +188,7 @@ li {
         background-color: rgba(255, 255, 255, 5)
     }
 }
+p{
+    position:relative;
+}
+
