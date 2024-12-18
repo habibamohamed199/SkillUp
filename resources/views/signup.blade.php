@@ -3,61 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SkillUp - Sign Up</title>
-  <link rel="stylesheet" href="{{asset("css/signup.css")}}">
+  <title>SkillUp SignUp</title>
+  <link rel="stylesheet" href="signup.css">
 </head>
 <body>
-  <header>
-    <div class="header-container">
-      <div class="logo">SkillUp</div>
-      <div class="search-bar-container">
-        <input type="text" class="search-bar" placeholder="Search For Courses">
-        <button class="search-btn"><i class="fa fa-search"></i></button>
-      </div>
-      <nav>
-        <ul class="nav-list">
-          <li><a href="#">Categories</a></li>
-          <li><a href="#">All Courses</a></li>
-        </ul>
-      </nav>
+  <<header>
+    <div class="navbar">
+        <h1 class="logo">SkillUp</h1>
+        <div class="search-container">
+            <img src="glass.png" alt="search-icon" class="search-icon">
+            <input type="search" placeholder="Search For Courses">
+        </div>
+        <nav>
+            <a href="#">Categories</a>
+            <a href="#">All Courses</a>
+        </nav>
     </div>
   </header>
-
-  <div class="form-container">
-    <h1 class="form-title">Welcome to SkillUp</h1>
-    <form class="form">
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Enter Your E-Mail">
-      </div>
-      <div class="form-group">
-        <label for="full-name">Full Name</label>
-        <input type="text" id="full-name" placeholder="Enter Your Full Name">
-      </div>
-      <div class="form-group">
-        <label for="phone-number">Phone Number</label>
-        <input type="tel" id="phone-number" placeholder="Enter Your Phone Number">
-      </div>
-      <div class="form-row">
+  <div class="welcome">
+    <h2>Welcome to SkillUp</h2>
+    </div>
+  <main>
+    <div class="signup-container">
+      <form>
         <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" placeholder="Enter Your Password">
+          <div class="form-column">
+            <label>Email</label>
+            <input type="email" placeholder="Enter Your E-Mail">
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter Your Full Name">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="Enter Your Phone Number">
+          </div>
+          <div class="form-column">
+            <label>Password</label>
+            <input type="password" placeholder="Enter Your Password">
+            <label>Confirm Password</label>
+            <input type="password" placeholder="Confirm Password">
+            <div class="gender">
+              <label>Gender</label>
+              <div class="gender-options">
+                <label><input type="radio" name="gender"> Male</label>
+                <label><input type="radio" name="gender"> Female</label>
+              </div>
+            </div>
+            <p>Already Registered? <a href="#" class="signin-link">Sign in</a></p>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="confirm-password">Confirm Password</label>
-          <input type="password" id="confirm-password" placeholder="Confirm Password">
-        </div>
-      </div>
-      <div class="form-row gender-row">
-        <label class="gender-label">Gender</label>
-        <div class="gender-options">
-          <label><input type="radio" name="gender" value="male"> Male</label>
-          <label><input type="radio" name="gender" value="female"> Female</label>
-        </div>
-      </div>
-      <button type="submit" class="sign-up-btn">Sign Up</button>
-      <p class="already-registered">Already Registered? <a href="#">Sign in</a></p>
-    </form>
-  </div>
+        <button type="submit" class="signup-btn">Sign Up</button>
+      </form>
+    </div>
+  </main>
 </body>
 </html>
