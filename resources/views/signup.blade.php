@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="signup.css">
 </head>
 <body>
-  <<header>
+  <header>
     <div class="navbar">
         <h1 class="logo">SkillUp</h1>
         <div class="search-container">
