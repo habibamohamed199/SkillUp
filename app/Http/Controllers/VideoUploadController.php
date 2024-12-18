@@ -13,7 +13,7 @@ class VideoUploadController extends Controller
 {
     public function index()
     {
-        return view('testing/videoUpload');
+        return view('video_upload');
     }
 
     public function upload()

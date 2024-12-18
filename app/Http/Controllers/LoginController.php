@@ -22,7 +22,9 @@ class LoginController extends Controller
             ]);
 
          if(Auth::attempt(['email' => request('email'), 'password' => request('password')])){
-           return "Success";
+           $user = auth()->user();
+           return "welcome ".$user->name;
+
          }else {
              return back()->withErrors([
                  'login' => 'Wrong Email or Password',
