@@ -11,7 +11,7 @@
     <div class="navbar">
         <h1 class="logo">SkillUp</h1>
         <div class="search-container">
-            <img src="glass.png" alt="search-icon" class="search-icon">
+            <img src="images/glass.png" alt="search-icon" class="search-icon">
             <input type="search" placeholder="Search For Courses">
         </div>
         <nav>
