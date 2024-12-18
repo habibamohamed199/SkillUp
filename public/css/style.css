@@ -1,11 +1,10 @@
-/* Basic Reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  /* Header Styles */
   header {
     background-color: #333;
     color: white;
@@ -38,7 +37,7 @@
     font-size: 1.2em;
     border-radius: 30px;
     border: none;
-    padding-right: 35px; /* Add space for the search icon */
+    padding-right: 35px; 
   }
   
   .search-btn {
@@ -47,16 +46,14 @@
     padding: 10px;
     cursor: pointer;
     position: absolute;
-    right: 10px; /* Position the search icon inside the input */
+    right: 10px; 
   }
   
   .search-btn i {
     color: #333;
     font-size: 1.2em;
   }
-  
-  /* Navigation Styles */
-  nav {
+    nav {
     text-align: right;
   }
   
@@ -79,9 +76,8 @@
     text-decoration: underline;
   }
   
-  /* Form Styles */
   body {
-    background-color: #000; /* Black background for the whole page */
+    background-color: #000; 
   }
   
   .form-container {
@@ -89,7 +85,7 @@
     max-width: 400px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #333; /* Dark background for the form */
+    background-color: #333;
     border-radius: 8px;
   }
   
@@ -135,17 +131,17 @@
   }
   
   .gender-options label {
-    color: white; /* Make gender options white */
+    color: white; 
   }
   
   .gender-row label {
-    color: white; /* Make the "Gender" label text white */
+    color: white; 
   }
   
   .sign-up-btn {
     width: 100%;
     padding: 10px;
-    background-color: red; /* Red color for Sign Up button */
+    background-color: red; 
     color: white;
     font-size: 1.2em;
     border: none;
@@ -154,26 +150,24 @@
   }
   
   .sign-up-btn:hover {
-    background-color: #b30000; /* Darker red on hover */
+    background-color: #b30000; 
   }
   
   .already-registered {
     text-align: center;
     margin-top: 15px;
-    color: white; /* Make "Already Registered" text white */
+    color: white; 
   }
   
   .already-registered a {
-    color: blue; /* Blue color for Sign In link */
+    color: blue; 
     text-decoration: none;
   }
   
   .already-registered a:hover {
     text-decoration: underline;
   }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
+    @media (max-width: 768px) {
     .header-container {
       flex-direction: column;
       text-align: center;
@@ -182,11 +176,11 @@
     .search-bar-container {
       width: 100%;
       margin-top: 10px;
-      justify-content: flex-start; /* Align the search bar to the left */
+      justify-content: flex-start; 
     }
   
     .search-bar {
-      width: 80%; /* Adjust search bar width on small screens */
+      width: 80%; 
     }
   
     .nav-list {
@@ -199,7 +193,7 @@
     }
   
     .form-container {
-      max-width: 90%; /* Adjust form width on small screens */
+      max-width: 90%;
     }
   }
   
