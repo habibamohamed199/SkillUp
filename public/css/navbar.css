@@ -10,20 +10,23 @@ header {
     padding: 10px 20px;
     max-height: 8vh;
 }
+
 .logo {
     font-size: 48px;
+
 }
 
 li {
     align-items: center;
-    margin:  20px;
+    margin: 20px;
     padding-top: 10px;
 }
 
 .link {
-    display:inline-block;
+    display: inline-block;
     text-decoration: none;
     color: #e3e3e3;
+    margin-top: 10px;
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
     font-size: 18px;
 
@@ -40,12 +43,13 @@ li {
     justify-content: space-between;
     list-style: none;
 }
+
 .search-container {
     display: flex;
     justify-content: center;
     margin-right: 60px;
     width: 45vw;
-    
+
 
 }
 
@@ -87,12 +91,11 @@ li {
 }
 
 
-
 .search-button:hover i {
     color: #B83939;
 }
 
-.border-btn{
+.border-btn {
     position: relative;
     display: inline-block;
 
@@ -102,7 +105,7 @@ li {
     transition: all 0.3s ease-in-out;
     text-decoration: none;
     margin: 0 10px;
-    padding: 5px;
+    padding: 10px;
     font-size: 18px;
 
 
@@ -116,7 +119,7 @@ li {
     right: 0;
     bottom: 0;
     border: 1px solid #B83939;
-    border-radius:10px;
+    border-radius: 10px;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -125,4 +128,60 @@ li {
     opacity: 1;
 }
 
+.dropdown {
+    position: relative;
+    display: inline-block;
+    align-self: center;
+    margin-top: 10px;
+}
 
+.dropdown-btn {
+    display: inline-block;
+    background: none;
+    color: #e3e3e3;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-size: 18px;
+    border: none;
+
+
+}
+
+.dropdown-content {
+    background-color: #121212;
+    margin-top: 10px;
+    left: 0;
+    top: 100%;
+    position: absolute;
+    visibility: hidden;
+    opacity:0;
+    min-width: 160px;
+    border-radius: 10px;
+    border: white solid 0.5px;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.dropdown:hover .dropdown-content {
+    opacity:1;
+    visibility: visible;
+    transform: translateY(0);
+
+}
+.dropdown:hover .dropdown-btn{
+    color: #B83939;
+    transform: scale(1.1);
+}
+
+.dropdown-content a {
+    color: #E3E3E3;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    &:hover {
+        color: #B83939;
+        background-color: rgba(255, 255, 255, 5)
+    }
+}

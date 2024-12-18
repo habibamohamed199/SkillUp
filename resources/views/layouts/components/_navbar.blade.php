@@ -1,4 +1,3 @@
-
 <header>
     <div class="logo">SkillUp</div>
     <div class="search-container">
@@ -11,9 +10,18 @@
     </div>
     <nav>
         <ul class="nav-list">
-            <li><a class="link" href="#" >Categories</a></li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropdown-btn">Categories</button>
+                    <div class="dropdown-content">
+                        @foreach($categories as $category)
+                            <a href="#">{{$category}}</a>
+                        @endforeach
+                    </div>
+                </div>
+            </li>
             <li><a class="link" href="#">All Courses</a></li>
-            <li ><a class="border-btn href="#"> Sign Out</a> </li>
+            <li><a class="border-btn href=" #"> Sign Out</a> </li>
         </ul>
     </nav>
 
