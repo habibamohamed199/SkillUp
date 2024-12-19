@@ -8,6 +8,7 @@ use App\Models\Video;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
+use function PHPUnit\Framework\directoryExists;
 
 class VideoUploadController extends Controller
 {
@@ -16,32 +17,45 @@ class VideoUploadController extends Controller
 
         return view('video_upload');
     }
+
     public function upload()
     {
+
         $request = request();
         $request->validate([
             'videos' => 'required|array',
             'videos.*' => 'file|mimes:mp4,mkv,avi|max:2048000',
+            'author' => 'required|email|exists:users,email',
+            'title' => 'required',
+            'category' => 'required',
+            'price' => 'required|numeric',
+            'time' => 'required|numeric',
+            'thumb' => 'required|image|mimes:jpeg,png,jpg,svg|max:20480'
         ]);
 
         $uploadedFiles = [];
-
         try {
-            $num = 1;
-            $course = new Course;
-            $course->title = "Test Course";
-            $course->category = "Test Category";
             $author = User::where('email', request('author'))->first();
+            $thumbnail = $request->file('thumb');
+            $tPath = $thumbnail->storeAs('thumbnails/' . $author->id . '-' . $request->title, $author->id . '-' . $request->title . '.' . $thumbnail->extension(), 'public');
+            $tUrl = Storage::url($tPath);
+            $num = 1;
+            $time = now()->format('y-m-d_h-i-s');
+            $course = new Course;
+            $course->title = $request->title;
+            $course->category = $request->category;
             $course->author_id = $author->id;
-            $course->thumbnail = "Test Thumbnail";
+            $course->thumbnail = $tUrl;
             $course->description = $request->description;
-            $course->brief = $request->description;
-            $course->price = 100;
+            $course->brief = $request->brief;
+            $course->price = $request->price;
+            $course->time = $request->time;
             $course->save();
             foreach ($request->file('videos') as $video) {
                 $extension = $video->getClientOriginalExtension();
-                $customFilename = $author->name . "-" . $course->title . $num . "." . $extension;
-                $path = $video->storeAs('videos', $customFilename, 'public');
+                $customFilename = $author->name . "_" . $course->title . '_' . $time . "_" . $num . "." . $extension;
+                $customPath = "videos/";
+                $path = $video->storeAs('videos/' . $author->id . '_' . $request->title, $author->id . '_' . $request->title . '_' . $time . '_' . $num . '.' . $extension, 'public');
                 $url = Storage::url($path);
                 $newVideo = new video;
                 $newVideo->title = $customFilename;

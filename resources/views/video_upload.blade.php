@@ -20,6 +20,7 @@
         @include("layouts.components._navbar_admin")
         <section class="course-upload">
             <form action="{{route("upload")}}" class="upload-form" method="POST" enctype="multipart/form-data">
+                @csrf
                 <div class="form-group">
                     <div class="form-left">
                         <label for="author">Course Author</label>
@@ -38,25 +39,47 @@
                             <div class="description">
                                 <label for="description">Description</label>
                                 <textarea name="description"
-                                          placeholder="A detailed description about the course" id="description"></textarea>
+                                          placeholder="A detailed description about the course"
+                                          id="description"></textarea>
                             </div>
                             <div class="description">
                                 <label for="brief">Brief</label>
-                                <textarea name="brief" id="brief" placeholder="A brief description about the course"></textarea>
+                                <textarea name="brief" id="brief"
+                                          placeholder="A brief description about the course"></textarea>
                             </div>
                         </div>
                         <div class="buttons">
-                            <label class="form-label">Choose Videos:</label>
-                            <input type="file" class="uploader" id="video" name="videos[]" accept="video/*"   multiple>
-                            <label class="form-label">Choose a Thumbnail</label>
-                            <input type="file" class="uploader" id="thumb" name="thumb" accept="image/*" >
+                            <label>Choose Videos:</label>
+                            <input type="file" class="uploader" id="video" name="videos[]" accept="video/*" multiple>
+                            <label>Choose a Thumbnail</label>
+                            <input type="file" class="uploader" id="thumb" name="thumb" accept="image/*">
                         </div>
                     </div>
-
                 </div>
 
-            </form>
+                <div class="errors">
+                    @if(session('success'))
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>
+                    @endif
 
+                    @if($errors->any())
+                        <div class="errors">
+                            <i class="fa-solid fa-circle-exclamation"> error</i>
+
+                            <ul>
+                                @foreach($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                </div>
+                <div class="confirm">
+                    <button type="submit" class="confirm-btn">Confirm</button>
+                </div>
+            </form>
         </section>
     </body>
 </html>

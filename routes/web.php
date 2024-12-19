@@ -19,7 +19,6 @@ Route::get('/courseplay',function(){
 Route::get('/test',function(){
     return view('testing/test');
 });
-Route::get("/upload-video",[VideoUploadController::class,'index'])->name('videoUpload.index');
 Route::post('/register-user',[RegisterController::class,'register'])->name("register-user");
 Route::get("/reg",[RegisterController::class,'index'])->name("register-page");
 Route::get("/login",[LoginController::class,'index'])->name("login-page");

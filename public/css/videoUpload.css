@@ -14,6 +14,7 @@ body {
     width: 70vw;
     margin: 50px auto;
     padding: 30px;
+    max-height: none;
     border-radius: 50px;
     justify-content: space-between;
     text-align: center;
@@ -22,7 +23,6 @@ body {
 .upload-form {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     padding: 20px 100px;
 
@@ -39,6 +39,10 @@ body {
 label {
     margin-top: 30px;
     font-weight: bold;
+}
+
+.buttons label {
+    margin-top: 10px;
 }
 
 .upload-form .text {
@@ -85,41 +89,36 @@ textarea {
     width: 45%;
 }
 
-p {
-    font-size: 14px;
+.confirm {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 60px;
 }
 
-.signin-link {
-    color: #00f;
-    text-decoration: none;
-}
 
-.signin-link:hover {
-    text-decoration: underline;
-}
-
-.signup-btn {
-    background-color: #b22222;
+.confirm-btn {
+    background-color: #B8393980;
     color: #fff;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 10px;
+    font-size: 20px;
     font-weight: bold;
     cursor: pointer;
     margin: 0 auto;
+    width: 40%;
+    transition: color 0.3ms ease-in-out;
 }
 
-.signup-btn:hover {
-    background-color: #8b0000;
+.confirm-btn:hover {
+    background-color: #B83939;
 }
 
 
 .upload-form {
-    flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    height: 70vh;
 }
 
 .form-left,
@@ -131,48 +130,66 @@ p {
 
 .upload-form label {
     display: block;
-    margin-bottom: 5px;
     font-size: 14px;
     color: #E3E3E3;
 }
-.buttons{
-    margin-top:5px;
+
+.buttons {
+    margin-top: 5px;
 }
-.uploader{
+
+.uploader {
     display: flex;
     flex-direction: column;
 }
-.uploader::file-selector-button{
+
+.uploader::file-selector-button {
     background-color: #B8393980;
     border-radius: 20px;
     border: none;
     color: #e3e3e3;
     transition: color 0.3s ease-in-out;
-    padding:10px 10px;
+    padding: 10px 10px;
     margin-right: 20px;
-    width:50%;
-    cursor:pointer;
-}
-.uploader::file-selector-button:hover{
-    background-color:#B83939;
-}
-
-.signup-btn {
-    background: #DA2B2B8F;
-    color: #FFFFFF;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 25px;
+    width: 50%;
     cursor: pointer;
-    transition: background 0.3s;
-    margin-top: 10px;
-
 }
 
-.signup-btn:hover {
-    background-color: #d32f2f;
+.uploader::file-selector-button:hover {
+    background-color: #B83939;
 }
+
+.errors {
+    display: flex;
+    max-height:30vh;
+    column-gap: 40px;
+    flex-direction: column;
+    background-color: #8f1707;
+    border-radius: 30px;
+    width:100%;
+    overflow:scroll;
+    scrollbar-width: none;
+    text-align: left;
+    animation: slideIn 0.7s ease-in-out;
+}
+.fa-solid {
+    margin-top: 20px;
+    margin-left: 20px;
+    color: #e3e3e3;
+
+}
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 
 @media (max-width: 768px) {
     .navbar {
