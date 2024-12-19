@@ -3,4 +3,15 @@ body{
     font-family: "Ubuntu", serif; ;
     background-color: #121212;
     color: #e3e3e3;
+    margin: 0;
+}
+.test{
+
+    display: block !important;
+    color:white !important;
+
+
+}
+p{
+    color:#e3e3e3;
 }

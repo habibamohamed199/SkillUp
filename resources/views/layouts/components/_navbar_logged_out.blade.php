@@ -10,9 +10,6 @@
     </div>
     <nav>
         <ul class="nav-list">
-            @if(Auth::check())
-                <li ><span class="link">${{Auth::user()->credit}}</span></li>
-            @endif
             <li>
                 <div class="dropdown">
                     <button class="dropdown-btn">Categories</button>
@@ -25,9 +22,9 @@
                 </div>
             </li>
             <li><a class="link" href="#">All Courses</a></li>
-            <li><a class="border-btn href=" #"> Sign Out</a> </li>
+            <li><a class="border-btn href=" #"> Sign In</a> </li>
+            <li><a class="border-btn href=" #"> Join Us</a> </li>
         </ul>
     </nav>
-
 
 </header>
