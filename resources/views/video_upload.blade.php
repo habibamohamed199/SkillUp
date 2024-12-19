@@ -18,12 +18,42 @@
     </head>
     <body>
         @include("layouts.components._navbar_admin")
-        <section class="course-upload" >
-            <form action="{{route("upload")}}" class=form method="POST">
-                <label for="author">Course Author</label>
-                <input type="text" name="author">
-                <label for="course title">Course Author</label>
-                <input type="text" name="author">
+        <section class="course-upload">
+            <form action="{{route("upload")}}" class="upload-form" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <div class="form-left">
+                        <label for="author">Course Author</label>
+                        <input type="text" name="author" id="author" class="text" placeholder="author@mail.com">
+                        <label for="category">Course Category</label>
+                        <input type="text" class="text" name="category" id="category">
+                        <label for="title">Course Title</label>
+                        <input type="text" class="text" name="title" id="title">
+                        <label for="price">Course Price</label>
+                        <input type="text" class="text" name="price" placeholder id="price">
+                    </div>
+                    <div class="form-right">
+                        <label for="time">Course Time</label>
+                        <input type="text" class="text" name="time" placeholder="Time in hours" id="time">
+                        <div class="descriptions">
+                            <div class="description">
+                                <label for="description">Description</label>
+                                <textarea name="description"
+                                          placeholder="A detailed description about the course" id="description"></textarea>
+                            </div>
+                            <div class="description">
+                                <label for="brief">Brief</label>
+                                <textarea name="brief" id="brief" placeholder="A brief description about the course"></textarea>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <label class="form-label">Choose Videos:</label>
+                            <input type="file" class="uploader" id="video" name="videos[]" accept="video/*"   multiple>
+                            <label class="form-label">Choose a Thumbnail</label>
+                            <input type="file" class="uploader" id="thumb" name="thumb" accept="image/*" >
+                        </div>
+                    </div>
+
+                </div>
 
             </form>
 

@@ -16,7 +16,6 @@ class VideoUploadController extends Controller
 
         return view('video_upload');
     }
-
     public function upload()
     {
         $request = request();
