@@ -10,7 +10,7 @@ class RegisterController extends Controller
 {
 
     public function index(){
-        return view('testing/register');
+        return view("signup");
     }
     public function register(){
 
@@ -27,7 +27,7 @@ class RegisterController extends Controller
        $newUser->password=Hash::make(request('password'));
        $newUser->name=request('name');
        $newUser->phone=request('phone');
-       $newUser->gender=request('gender');
+       $newUser->gender=request()->input('gender');
        $newUser->save();
 
 

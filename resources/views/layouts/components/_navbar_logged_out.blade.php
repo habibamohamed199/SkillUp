@@ -22,8 +22,8 @@
                 </div>
             </li>
             <li><a class="link" href="#">All Courses</a></li>
-            <li><a class="border-btn href=" #"> Sign In</a> </li>
-            <li><a class="border-btn href=" #"> Join Us</a> </li>
+            <li><a class="border-btn" href="#">Sign In</a> </li>
+            <li><a class="border-btn" href="{{route("signup")}}">Join Us</a></li>
         </ul>
     </nav>
 

@@ -26,7 +26,7 @@
             </li>
             <li><a class="link" href="#">All Courses</a></li>
             <li><a class="link" href="#">Add Courses</a></li>
-            <li><a class="border-btn href=" #"> Sign Out</a></li>
+            <li><a class="border-btn" href="{{route("logout")}}" >Sign Out</a></li>
         </ul>
     </nav>
 

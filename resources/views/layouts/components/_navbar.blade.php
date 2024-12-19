@@ -11,7 +11,7 @@
     <nav>
         <ul class="nav-list">
             @if(Auth::check())
-                <li ><span class="link">${{Auth::user()->credit}}</span></li>
+                <li><span class="link">${{Auth::user()->credit}}</span></li>
             @endif
             <li>
                 <div class="dropdown">
@@ -25,7 +25,7 @@
                 </div>
             </li>
             <li><a class="link" href="#">All Courses</a></li>
-            <li><a class="border-btn href=" #"> Sign Out</a> </li>
+            <li><a class="border-btn" href="{{route("logout")}}">Sign Out</a></li>
         </ul>
     </nav>
 

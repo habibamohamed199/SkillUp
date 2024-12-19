@@ -67,8 +67,10 @@ label {
     border: none;
     border-radius: 20px;
     font-size: 14px;
-    background: #E3E3E3;
-    color: #00000070;
+    height: 5vh;
+    color:black;
+    background-color: #E3E3E3;
+
 
 }
 
@@ -142,6 +144,7 @@ p {
     border: none;
     border-radius: 20px;
     background: #E3E3E3;
+    color:black;
     outline: none;
 }
 
@@ -230,6 +233,7 @@ p {
 .signup-btn:hover {
     background-color: #d32f2f;
 }
+
 
 @media (max-width: 768px) {
     .navbar {

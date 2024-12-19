@@ -6,6 +6,7 @@ use App\Models\Course;
 use App\Models\User;
 use App\Models\Video;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use function PHPUnit\Framework\directoryExists;
@@ -14,8 +15,11 @@ class VideoUploadController extends Controller
 {
     public function index()
     {
-
-        return view('video_upload');
+        if (Auth::user() && Auth::user()->role=='admin') {
+            return view('video_upload');
+        } else {
+            return back()->withErrors("You are not allowed to access this page");
+        }
     }
 
     public function upload()

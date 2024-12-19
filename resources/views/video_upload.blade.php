@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="{{asset('css/videoUpload.css')}}">
     </head>
     <body>
-        @include("layouts.components._navbar_admin")
+        @include("layouts.components._navbar_main")
         <section class="course-upload">
             <form action="{{route("upload")}}" class="upload-form" method="POST" enctype="multipart/form-data">
                 @csrf
@@ -82,4 +82,5 @@
             </form>
         </section>
     </body>
+
 </html>
