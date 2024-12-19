@@ -55,7 +55,9 @@ class VideoUploadController extends Controller
                 $extension = $video->getClientOriginalExtension();
                 $customFilename = $author->name . "_" . $course->title . '_' . $time . "_" . $num . "." . $extension;
                 $customPath = "videos/";
-                $path = $video->storeAs('videos/' . $author->id . '_' . $request->title, $author->id . '_' . $request->title . '_' . $time . '_' . $num . '.' . $extension, 'public');
+                $path = $video->storeAs('videos/' . $author->id . '_' . $request->title,
+                    $author->id . '_' . $request->title . '_' . $time . '_' . $num . '.' . $extension,
+                    'public');
                 $url = Storage::url($path);
                 $newVideo = new video;
                 $newVideo->title = $customFilename;
