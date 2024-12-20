@@ -14,6 +14,13 @@
         <div class="playlist">
             @foreach($videos as $video)
                 <div class="playlist-item" onclick="changeVideo('{{$video->path}}', '{{$video->title}}')">
+            <div class="title" id="main-title">{{$videos[0]->title}}</div>
+        </div>
+        <div class="playlist">
+            @foreach($videos as $video)
+                <div class="playlist-item">
+                    <a onclick="changeVideo('{{$video->path}}','{{$video->title}}')" class="video-link">
+>>>>>>> Stashed changes
                     <video muted>
                         <source src="{{$video->path}}" type="video/mp4">
                     </video>
