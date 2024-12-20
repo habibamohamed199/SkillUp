@@ -14,7 +14,12 @@
     border-radius: 30px;
     border: 1px solid white
 }
-
+.video-link{
+    text-decoration: none;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
 .main-video .title {
     margin-top: 40px;
     font-size: 24px;

@@ -63,7 +63,7 @@ class VideoUploadController extends Controller
                     'public');
                 $url = Storage::url($path);
                 $newVideo = new video;
-                $newVideo->title = $customFilename;
+                $newVideo->title = $course->title.' '.$num;
                 $newVideo->path = $url;
                 $newVideo->course_id = $course->id;
                 $newVideo->save();
