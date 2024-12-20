@@ -14,3 +14,4 @@ class CoursePlayController extends Controller
         return view('courseplay', ["videos"=>$videos]);
     }
 }
+

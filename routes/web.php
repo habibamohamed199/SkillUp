@@ -34,5 +34,7 @@ Route::post('/upload',[VideoUploadController::class,'upload'])->name("upload");
 Route::get('/signup',[RegisterController::class,'index'])->name("signup");
 Route::post('/signup-user',[RegisterController::class,'register'])->name("signup-user");
 
+Route::get("/home/{search}",[HomeController::class ,'search'])->name("search.index");
+
 
 
