@@ -14,7 +14,7 @@ return new class extends Migration
     {
         Schema::create('courses', function (Blueprint $table) {
             $table->uuid('id')->default(DB::raw('UUID()'))->primary();
-            $table->string('title','50')->nullable(false);
+            $table->text('title')->nullable(false);
             $table->string('category')->nullable(false);
             $table->text('description')->nullable(false);
             $table->text('brief')->nullable(false);
@@ -22,7 +22,7 @@ return new class extends Migration
             $table->foreign('author_id')->references('id')->on('users');
             $table->text('thumbnail')->nullable();
             $table->integer("price")->nullable(false);
-            $table->float("rating")->default(0);
+            $table->integer("time")->nullable(false);
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });

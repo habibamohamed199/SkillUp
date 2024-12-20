@@ -14,7 +14,7 @@ return new class extends Migration
     {
         Schema::create('videos', function (Blueprint $table) {
             $table->uuid('id')->default(DB::raw('UUID()'))->primary();
-            $table->string('title',50)->nullable(false);
+            $table->text('title')->nullable(false);
             $table->uuid('course_id')->nullable(false);
             $table->foreign('course_id')->references('id')->on('courses');
             $table->text('path')->nullable(false);
