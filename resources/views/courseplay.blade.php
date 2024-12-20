@@ -6,7 +6,6 @@
 @section('content')
     <section class="main">
         <div class="main-video">
-
             <video controls>
                 <source src="{{$videos[0]->path}}" type="video/mp4">
             </video>
@@ -25,5 +24,15 @@
             @endforeach
         </div>
     </section>
+
+    <script>
+            function changeVideo(videoPath, videoTitle) {
+            var mainVideo = document.getElementById('main-video');
+            var mainTitle = document.getElementById('main-title');
+            mainVideo.src = videoPath;
+            mainTitle.textContent = videoTitle;
+            mainVideo.play();       
+          }
+    </script>
 
 @endsection
