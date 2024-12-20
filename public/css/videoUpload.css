@@ -108,7 +108,7 @@ textarea {
     cursor: pointer;
     margin: 0 auto;
     width: 40%;
-    transition: color 0.3ms ease-in-out;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .confirm-btn:hover {
@@ -159,8 +159,25 @@ textarea {
     background-color: #B83939;
 }
 
+.delete-btn {
+    background-color: transparent;
+    color: #B83939;
+    padding: 10px 20px;
+    border: 1px solid #B83939;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 auto;
+    width: 40%;
+    transition: all 0.3s ease-in-out;
+}
 
-
+.delete-btn:hover {
+    color: #e3e3e3;
+    border-color:transparent;
+    background-color: #B83939;
+}
 
 
 @media (max-width: 768px) {
@@ -183,9 +200,7 @@ textarea {
         width: 100%;
     }
 
-    .already-registered {
-        text-align: center;
-    }
+
 }
 
 @media (max-width: 480px) {

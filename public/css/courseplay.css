@@ -1,40 +1,52 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #121212;
-    color: #FFFFFF;
+.main {
     display: flex;
     flex-direction: row;
     height: 100vh;
-  }
-  .main-video {
+}
+
+.main-video {
     flex: 2;
     padding: 20px;
-  }
-  .main-video video {
+}
+
+.main-video video {
     width: 100%;
     border-radius: 30px;
-  }
-  .main-video .title {
+    border: 1px solid white
+}
+
+.main-video .title {
     margin-top: 40px;
     font-size: 24px;
-  }
-  .playlist {
+
+}
+
+.playlist {
     flex: 1;
     padding: 20px;
+    margin: 10px;
     overflow-y: auto;
     background-color: #111;
     border: 1px solid #fff;
     border-radius: 10px;
-  }
-  .playlist-item {
+}
+
+.playlist-item {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+
+    margin-bottom: 30px;
     cursor: pointer;
-  }
-  .playlist-item video {
+    transition: background-color 0.3s ease-in-out,
+    padding-bottom 0.3s ease-in-out,
+    padding-top 0.3s ease-in-out,
+    padding-right 0.3s ease-in-out,
+    padding-left 0.3s ease-in-out;
+
+    border-radius: 30px;
+}
+
+.playlist-item video {
     width: 343px;
     height: 189px;
     top: 15px;
@@ -42,9 +54,11 @@ body {
     gap: 0px;
     border-radius: 30px;
     opacity: 0px;
-    
-  }
-  .playlist-item .title {
+
+
+}
+
+.playlist-item .title {
     font-size: 16px;
     width: 234px;
     height: 48px;
@@ -53,22 +67,30 @@ body {
     gap: 0px;
     opacity: 0px;
     color: #FFFFFF;
-    
-  }
-  .playlist-item:hover {
+
+
+}
+
+.playlist-item:hover {
     background-color: #333;
-    padding: 10px;
-    border-radius: 30px;
-  }
-  
-  @media (max-width: 768px) {
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+
+
+}
+
+@media (max-width: 768px) {
     body {
         flex-direction: column;
     }
+
     .main-video {
         flex: none;
         padding: 10px;
     }
+
     .playlist {
         flex: none;
         padding: 10px;
@@ -76,13 +98,15 @@ body {
         flex-wrap: wrap;
         justify-content: center;
     }
+
     .playlist-item {
         flex-direction: column;
         align-items: center;
         margin-bottom: 10px;
     }
+
     .playlist-item video {
         width: 200px;
         margin: 0 0 10px 0;
     }
-  }
+}

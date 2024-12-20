@@ -24,7 +24,6 @@ class VideoUploadController extends Controller
 
     public function upload()
     {
-
         $request = request();
         $request->validate([
             'videos' => 'required|array',

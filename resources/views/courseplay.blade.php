@@ -1,55 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Playlist</title>
-    <link rel="stylesheet" href="courseplay.css">
-</head>
-<body>
-    <div class="main-video">
-        <video controls>
-            <source src="videos\Lecture 03_ Part 01- Introduction to PHP.mp4" type="video/mp4">
-        </video>
-        <div class="title">Episode Title</div>
-    </div>
-    <div class="playlist">
-        <div class="playlist-item">
-            <video muted>
-                <source src="videos\Lecture 03_ Part 01- Introduction to PHP.mp4" type="video/mp4">
+@extends("layouts.master")
+@section('title', "Course Play")
+@section('styles')
+    <link rel="stylesheet" href="{{asset("css/courseplay.css")}}"
+@endsection
+@section('content')
+    <section class="main">
+        <div class="main-video">
+
+            <video controls>
+                <source src="{{$videos[0]->path}}" type="video/mp4">
             </video>
             <div class="title">Episode Title</div>
         </div>
-        <div class="playlist-item">
-            <video muted>
-                <source src="videos\Lecture 03_ Part 01- Introduction to PHP.mp4" type="video/mp4">
-            </video>
-            <div class="title">Episode Title</div>
+        <div class="playlist">
+            @foreach($videos as $video)
+                <div class="playlist-item">
+                    <a href="#">
+                    <video muted>
+                        <source src="{{$video->path}}" type="video/mp4">
+                    </video>
+                    <div class="title">{{$video->title}}</div>
+                    </a>
+                </div>
+            @endforeach
         </div>
-        <div class="playlist-item">
-            <video muted>
-                <source src="videos\Lecture 03_ Part 01- Introduction to PHP.mp4" type="video/mp4">
-            </video>
-            <div class="title">Episode Title</div>
-        </div>
-        <div class="playlist-item">
-            <video muted>
-                <source src="videos\Lecture 03_ Part 01- Introduction to PHP.mp4" type="video/mp4">
-            </video>
-            <div class="title">Episode Title</div>
-        </div>
-        <div class="playlist-item">
-            <video muted>
-                <source src="videos\Lecture 03_ Part 01- Introduction to PHP.mp4" type="video/mp4">
-            </video>
-            <div class="title">Episode Title</div>
-        </div>
-        <div class="playlist-item">
-            <video muted>
-                <source src="videos\Lecture 03_ Part 01- Introduction to PHP.mp4" type="video/mp4">
-            </video>
-            <div class="title">Episode Title</div>
-        </div>
-    </div>
-</body>
-</html>
+    </section>
+
+@endsection
