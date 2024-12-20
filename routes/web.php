@@ -36,3 +36,5 @@ Route::post('/signup-user',[RegisterController::class,'register'])->name("signup
 
 Route::get("/home/{search}",[HomeController::class ,'search'])->name("search.index");
 
+
+
