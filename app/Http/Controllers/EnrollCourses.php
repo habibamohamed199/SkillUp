@@ -3,10 +3,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
-use App\Models\Course;
-use App\Models\User_Course;
 
-class EnrollController extends Controller
+class EnrollCourses extends Controller
 {
     public function enroll()
     {
