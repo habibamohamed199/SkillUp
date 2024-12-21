@@ -36,4 +36,4 @@ Route::post('/signup-user',[RegisterController::class,'register'])->name("signup
 
 Route::get("/home/{search}",[HomeController::class ,'search'])->name("search.index");
 
-Route::get('/enrollcourses', [CourseController::class, 'enroll'])->name('enroll.index');
+Route::get('/enrollcourses', [EnrollController::class, 'enroll'])->name('enroll.index');
